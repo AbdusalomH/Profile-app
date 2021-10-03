@@ -11,26 +11,27 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     var tarifi: [GetTarif] = []
     var tarifiName: [List] = []
-
+    var tarigInfo: TarifInfoModel!
+    
 
     let phoneNumberLabel   = UILabel()
     let imageService       = UIButton()
-    let contanerGeneral    = UIView()
-    let containerHeader    = UIView()
+    let contanerGeneral    = PRView()
+    let containerHeader    = PRView()
     let containerFooter    = UIView()
-    let containerMain      = UIView()
-    let containerButton    = UIView()
+    let containerMain      = PRView()
+    let containerButton    = PRView()
     let backgroundImage    = UIImageView()
      
     let tarifDetails       = UILabel()
     let prizifKupit        = UILabel()
     let nastroiSvyaz       = UIButton()
      
-    let contanainerStack   = UIView()
+    let contanainerStack   = PRView()
     let stackviewItem      = UIStackView()
      
-    let simCardButton      = UIButton()
-    let internetHomeButton = UIButton()
+    let simCardButton      = PRButton()
+    let internetHomeButton = PRButton()
     
     let simcardImage       = UIImageView()
     let simcardLabel       = UILabel()
@@ -44,6 +45,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        
         UIConfigure()
         configureCollectionView()
         goToCall()
@@ -53,21 +55,30 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         configureBottonMenu()
         configureSimcartButtonNavigation()
         getTarif()
+        getBalanceInfo()
+        
+        
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
+        configureViewheigt()
 
     }
-
+    
+    
+    func configureViewheigt(){
+        let height = view.frame.size.height
+        view.frame.size.height = height
+    }
+  
     
     func UIConfigure() {
         view.addSubview(phoneNumberLabel)
         view.addSubview(imageService)
 
-        phoneNumberLabel.text                                       = "+992927777173"
         phoneNumberLabel.layer.borderWidth                          = 1
         phoneNumberLabel.layer.borderColor                          = UIColor.systemGray4.cgColor
         phoneNumberLabel.layer.cornerRadius                         = 10
@@ -96,11 +107,13 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         ])
     }
     
+    
     func getTarif() {
-        
+        showLoadingView()
         NetworkManager.shared.getFollowers { [weak self] (result) in
             
             guard let self = self else {return}
+            self.removeLoadingView()
             
             switch result {
             
@@ -108,8 +121,6 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                 
             self.tarifi.append(tarifs)
             self.tarifiName = tarifs.list
-            print(self.tarifiName)
-                
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
@@ -117,9 +128,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             case .failure(let error):
                 print(error)
             }
-
         }
- 
     }
     
     
@@ -131,11 +140,17 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     
     @objc func serviceCallButtonTapped() {
-        let navigateToCallView = ServiceCallVC()
-        navigationController?.pushViewController(navigateToCallView, animated: true)
+        if let url = URL(string: "tel://+992927777173") {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url , options: [:], completionHandler: nil)
+            }else {
+                print("not able to open")
+            }
+        }
     }
     
-        
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tarifiName.count
     }
@@ -201,6 +216,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         ])
     }
     
+    
     func configureContainerOne() {
         view.addSubview(contanerGeneral)
         contanerGeneral.addSubview(containerMain)
@@ -214,12 +230,10 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         containerButton.addSubview(nastroiSvyaz)
         
  
-        contanerGeneral.translatesAutoresizingMaskIntoConstraints   = false
-        containerMain.translatesAutoresizingMaskIntoConstraints     = false
+
         backgroundImage.translatesAutoresizingMaskIntoConstraints   = false
-        containerHeader.translatesAutoresizingMaskIntoConstraints   = false
         containerFooter.translatesAutoresizingMaskIntoConstraints   = false
-        containerButton.translatesAutoresizingMaskIntoConstraints   = false
+
         
         tarifDetails.translatesAutoresizingMaskIntoConstraints      = false
         prizifKupit.translatesAutoresizingMaskIntoConstraints       = false
@@ -254,9 +268,6 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         containerButton.backgroundColor = .black
         
         
-        
-        let reportData = ReportInfoVCDetails()
-        self.add(chilvVC: reportData, to: self.backgroundImage)
 
         NSLayoutConstraint.activate([
             
@@ -308,10 +319,12 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         ])
     }
     
+    
     func nastroySvyazTapped() {
         
         nastroiSvyaz.addTarget(self, action: #selector(svyazTappped), for: .touchUpInside)
     }
+    
     
     @objc func svyazTappped() {
         
@@ -320,6 +333,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         navigationController?.pushViewController(svyaVC, animated: true)
         
     }
+    
     
     func add(chilvVC: UIViewController, to containerView: UIView) {
         addChild(chilvVC)
@@ -334,10 +348,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         view.addSubview(contanainerStack)
         contanainerStack.addSubview(stackviewItem)
 
-        contanainerStack.translatesAutoresizingMaskIntoConstraints  = false
         stackviewItem.translatesAutoresizingMaskIntoConstraints     = false
-        simCardButton.translatesAutoresizingMaskIntoConstraints     = false
-        internetHomeButton.translatesAutoresizingMaskIntoConstraints      = false
         
         simcardLabel.translatesAutoresizingMaskIntoConstraints      = false
         simcardImage.translatesAutoresizingMaskIntoConstraints      = false
@@ -356,19 +367,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         simCardButton.backgroundColor = .systemBackground
         internetHomeButton.backgroundColor = .systemBackground
         
-        simCardButton.layer.cornerRadius                            = 10
-        simCardButton.layer.shadowRadius                            = 5
-        simCardButton.layer.shadowOpacity                           = 0.2
-        simCardButton.layer.shadowOffset                            = CGSize(width: 1, height: 2)
-        simCardButton.clipsToBounds                                 = false
-        
-        internetHomeButton.layer.cornerRadius                             = 10
-        internetHomeButton.layer.shadowRadius                             = 5
-        internetHomeButton.layer.shadowOpacity                            = 0.2
-        internetHomeButton.layer.shadowOffset                             = CGSize(width: 1, height: 1)
-        internetHomeButton.clipsToBounds                                  = false
-        
-        
+       
         simCardButton.addSubview(simcardImage)
         simCardButton.addSubview(simcardLabel)
         
@@ -416,6 +415,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         
     }
     
+    
     func configureBottonMenu() {
     
         simcardImage.image          = UIImage(systemName: "esim.fill")
@@ -436,11 +436,13 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
   
     }
     
+    
     func configureSimcartButtonNavigation() {
         simCardButton.addTarget(self, action: #selector(goToNewSimcard), for: .touchUpInside)
         internetHomeButton.addTarget(self, action: #selector(goToHomeInternet), for: .touchUpInside)
    
     }
+    
     
     @objc func goToNewSimcard() {
         let newSimcard = SimCardMenuCV()
@@ -452,7 +454,30 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         let newInternetHome = ServicesVC(username: "Home internet")
         navigationController?.pushViewController(newInternetHome, animated: true)
     }
+    
+    func getBalanceInfo() {
+        
+        NetworkManager.shared.getTarifInfo { [weak self] result in
+            guard let self = self else {return}
+            switch result {
+            
+            
+            case .success(let infoBalance):
+                
+                self.tarigInfo = infoBalance
+                DispatchQueue.main.async {
+                    self.configureContainerOne()
+                    let reportData = ReportInfoVCDetails(tarifInfo: self.tarigInfo)
+                    self.add(chilvVC: reportData, to: self.backgroundImage)
+                    self.phoneNumberLabel.text = String("\(self.tarigInfo.id)")
 
+                }
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }
 
 

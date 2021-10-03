@@ -25,7 +25,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func bottomMenu() -> UITabBarController {
         let tabbar = UITabBarController()
-        //UITabBar.appearance().backgroundColor   = .black
         UITabBar.appearance().tintColor         = .systemYellow
         UINavigationBar.appearance().tintColor  = .systemGray
    
@@ -38,7 +37,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
         let mainVC = MainViewController()
         mainVC.title = "Главная"
-        //mainVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         mainVC.tabBarItem = UITabBarItem(title: "Главное", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
         
         return UINavigationController(rootViewController: mainVC)
@@ -48,7 +46,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
         let raskodVC = RaskhodVC()
         raskodVC.title = "Расходы"
-        //raskodVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
         
         raskodVC.tabBarItem = UITabBarItem(title: "Финансы", image: UIImage(systemName: "dollarsign.circle"), selectedImage: UIImage(systemName: "dollarsign.circle.fill"))
         return UINavigationController(rootViewController: raskodVC)
@@ -67,7 +64,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         moreVC.title = "Еще"
         
         moreVC.tabBarItem = UITabBarItem(title: "Еще", image: UIImage(systemName: "line.horizontal.3.decrease.circle"), selectedImage: UIImage(systemName: "line.horizontal.3.decrease.circle.fill"))
-        //moreVC.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 2)
         return UINavigationController(rootViewController: moreVC)
     }
 

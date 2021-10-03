@@ -3,18 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B97836206395D1D4DAFBCB1 /* Pods_Test_Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699C81852CD918F6D3DB3FC8 /* Pods_Test_Profile.framework */; };
 		2816590B270354F500087208 /* SimCardMenuCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2816590A270354F500087208 /* SimCardMenuCV.swift */; };
-		2816590D2703882400087208 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2816590C2703882400087208 /* ModelData.swift */; };
 		28165917270447B600087208 /* BalanceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28165916270447B600087208 /* BalanceInfo.swift */; };
 		28165919270449D500087208 /* ItemInfoReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28165918270449D500087208 /* ItemInfoReportVC.swift */; };
 		2816591B27044BB200087208 /* ItemInfoReporVCDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2816591A27044BB200087208 /* ItemInfoReporVCDetails.swift */; };
 		2816591E2705C64C00087208 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2816591D2705C64C00087208 /* NetworkManager.swift */; };
 		281659212705C9E000087208 /* GetTarif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281659202705C9E000087208 /* GetTarif.swift */; };
 		281659242705CC2D00087208 /* TFErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281659232705CC2D00087208 /* TFErrors.swift */; };
+		281659262706BBA100087208 /* SimCardTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281659252706BBA100087208 /* SimCardTableCell.swift */; };
+		281659282706EBE100087208 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281659272706EBE100087208 /* People.swift */; };
+		2816592A2706F1A700087208 /* PersonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281659292706F1A700087208 /* PersonImage.swift */; };
 		2847FFCC2702D103009061A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2847FFCB2702D103009061A1 /* AppDelegate.swift */; };
 		2847FFCE2702D103009061A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2847FFCD2702D103009061A1 /* SceneDelegate.swift */; };
 		2847FFD62702D103009061A1 /* Test_Profile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2847FFD42702D103009061A1 /* Test_Profile.xcdatamodeld */; };
@@ -25,19 +28,26 @@
 		2847FFE72702EC1E009061A1 /* RaskhodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2847FFE62702EC1E009061A1 /* RaskhodVC.swift */; };
 		2847FFE92702ECCA009061A1 /* MoreFunctionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2847FFE82702ECCA009061A1 /* MoreFunctionsVC.swift */; };
 		2847FFEC2702FAB3009061A1 /* menuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2847FFEA2702FAB3009061A1 /* menuCell.swift */; };
-		2847FFF127030FF2009061A1 /* MenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2847FFF027030FF2009061A1 /* MenuItems.swift */; };
-		2847FFF527032F6B009061A1 /* ServiceCallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2847FFF427032F6B009061A1 /* ServiceCallVC.swift */; };
+		28A5E0B12708118100120DEB /* PRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A5E0B02708118000120DEB /* PRView.swift */; };
+		28A5E0B4270811AD00120DEB /* PRLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A5E0B3270811AD00120DEB /* PRLabel.swift */; };
+		28A5E0B627081DC900120DEB /* PRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A5E0B527081DC900120DEB /* PRButton.swift */; };
+		28A5E0B927081EC200120DEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A5E0B827081EC200120DEB /* ViewController.swift */; };
+		28A5E0E127098A9C00120DEB /* tarifInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A5E0E027098A9C00120DEB /* tarifInfoModel.swift */; };
+		28A5E0E32709BDD500120DEB /* PersonInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A5E0E22709BDD500120DEB /* PersonInfoVC.swift */; };
+		28A5E0E5270A237B00120DEB /* RaskhodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A5E0E4270A237B00120DEB /* RaskhodModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2816590A270354F500087208 /* SimCardMenuCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimCardMenuCV.swift; sourceTree = "<group>"; };
-		2816590C2703882400087208 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		28165916270447B600087208 /* BalanceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceInfo.swift; sourceTree = "<group>"; };
 		28165918270449D500087208 /* ItemInfoReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoReportVC.swift; sourceTree = "<group>"; };
 		2816591A27044BB200087208 /* ItemInfoReporVCDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoReporVCDetails.swift; sourceTree = "<group>"; };
 		2816591D2705C64C00087208 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		281659202705C9E000087208 /* GetTarif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTarif.swift; sourceTree = "<group>"; };
 		281659232705CC2D00087208 /* TFErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFErrors.swift; sourceTree = "<group>"; };
+		281659252706BBA100087208 /* SimCardTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimCardTableCell.swift; sourceTree = "<group>"; };
+		281659272706EBE100087208 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		281659292706F1A700087208 /* PersonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonImage.swift; sourceTree = "<group>"; };
 		2847FFC82702D103009061A1 /* Test-Profile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test-Profile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2847FFCB2702D103009061A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2847FFCD2702D103009061A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,8 +60,16 @@
 		2847FFE62702EC1E009061A1 /* RaskhodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaskhodVC.swift; sourceTree = "<group>"; };
 		2847FFE82702ECCA009061A1 /* MoreFunctionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreFunctionsVC.swift; sourceTree = "<group>"; };
 		2847FFEA2702FAB3009061A1 /* menuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuCell.swift; sourceTree = "<group>"; };
-		2847FFF027030FF2009061A1 /* MenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItems.swift; sourceTree = "<group>"; };
-		2847FFF427032F6B009061A1 /* ServiceCallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCallVC.swift; sourceTree = "<group>"; };
+		28A5E0B02708118000120DEB /* PRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRView.swift; sourceTree = "<group>"; };
+		28A5E0B3270811AD00120DEB /* PRLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRLabel.swift; sourceTree = "<group>"; };
+		28A5E0B527081DC900120DEB /* PRButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRButton.swift; sourceTree = "<group>"; };
+		28A5E0B827081EC200120DEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28A5E0E027098A9C00120DEB /* tarifInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tarifInfoModel.swift; sourceTree = "<group>"; };
+		28A5E0E22709BDD500120DEB /* PersonInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInfoVC.swift; sourceTree = "<group>"; };
+		28A5E0E4270A237B00120DEB /* RaskhodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaskhodModel.swift; sourceTree = "<group>"; };
+		4A71818017E1C21F0DF2E9AD /* Pods-Test-Profile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Profile.debug.xcconfig"; path = "Target Support Files/Pods-Test-Profile/Pods-Test-Profile.debug.xcconfig"; sourceTree = "<group>"; };
+		699C81852CD918F6D3DB3FC8 /* Pods_Test_Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		981912765E0EFF623F0F621A /* Pods-Test-Profile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Profile.release.xcconfig"; path = "Target Support Files/Pods-Test-Profile/Pods-Test-Profile.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B97836206395D1D4DAFBCB1 /* Pods_Test_Profile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +87,9 @@
 		281659152704478D00087208 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				28A5E0B22708119300120DEB /* PRLabels */,
+				28A5E0AF2708115D00120DEB /* PRView */,
+				28A5E0AE2708115100120DEB /* PRImage */,
 				28165916270447B600087208 /* BalanceInfo.swift */,
 				28165918270449D500087208 /* ItemInfoReportVC.swift */,
 				2816591A27044BB200087208 /* ItemInfoReporVCDetails.swift */,
@@ -87,6 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				281659202705C9E000087208 /* GetTarif.swift */,
+				281659272706EBE100087208 /* People.swift */,
+				28A5E0E027098A9C00120DEB /* tarifInfoModel.swift */,
+				28A5E0E4270A237B00120DEB /* RaskhodModel.swift */,
 			);
 			path = ModelCollectionView;
 			sourceTree = "<group>";
@@ -104,6 +129,8 @@
 			children = (
 				2847FFCA2702D103009061A1 /* Test-Profile */,
 				2847FFC92702D103009061A1 /* Products */,
+				79D981B08066C1B70043BF72 /* Pods */,
+				EAD88EAF6A6C9E1C9EEFEE23 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,19 +145,19 @@
 		2847FFCA2702D103009061A1 /* Test-Profile */ = {
 			isa = PBXGroup;
 			children = (
+				28A5E0B727081E3E00120DEB /* Ext+ViewController */,
+				2847FFF227032B88009061A1 /* Screens */,
 				281659222705CC1000087208 /* Utilities */,
 				281659152704478D00087208 /* Views */,
-				2847FFCB2702D103009061A1 /* AppDelegate.swift */,
-				2847FFCD2702D103009061A1 /* SceneDelegate.swift */,
-				2847FFD72702D108009061A1 /* Assets.xcassets */,
-				2847FFF227032B88009061A1 /* Screens */,
-				2847FFD92702D108009061A1 /* LaunchScreen.storyboard */,
-				2847FFDC2702D108009061A1 /* Info.plist */,
-				2847FFD42702D103009061A1 /* Test_Profile.xcdatamodeld */,
 				2816591C2705C63100087208 /* NetworkManager */,
 				2816591F2705C9CD00087208 /* ModelCollectionView */,
 				2847FFF327032BBB009061A1 /* CustomCell */,
-				2847FFF027030FF2009061A1 /* MenuItems.swift */,
+				2847FFCB2702D103009061A1 /* AppDelegate.swift */,
+				2847FFCD2702D103009061A1 /* SceneDelegate.swift */,
+				2847FFD72702D108009061A1 /* Assets.xcassets */,
+				2847FFD92702D108009061A1 /* LaunchScreen.storyboard */,
+				2847FFDC2702D108009061A1 /* Info.plist */,
+				2847FFD42702D103009061A1 /* Test_Profile.xcdatamodeld */,
 			);
 			path = "Test-Profile";
 			sourceTree = "<group>";
@@ -142,8 +169,8 @@
 				2847FFE62702EC1E009061A1 /* RaskhodVC.swift */,
 				2847FFE82702ECCA009061A1 /* MoreFunctionsVC.swift */,
 				2847FFE42702D47B009061A1 /* ServicesVC.swift */,
-				2847FFF427032F6B009061A1 /* ServiceCallVC.swift */,
 				2816590A270354F500087208 /* SimCardMenuCV.swift */,
+				28A5E0E22709BDD500120DEB /* PersonInfoVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -152,9 +179,59 @@
 			isa = PBXGroup;
 			children = (
 				2847FFEA2702FAB3009061A1 /* menuCell.swift */,
-				2816590C2703882400087208 /* ModelData.swift */,
+				281659252706BBA100087208 /* SimCardTableCell.swift */,
 			);
 			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		28A5E0AE2708115100120DEB /* PRImage */ = {
+			isa = PBXGroup;
+			children = (
+				281659292706F1A700087208 /* PersonImage.swift */,
+			);
+			path = PRImage;
+			sourceTree = "<group>";
+		};
+		28A5E0AF2708115D00120DEB /* PRView */ = {
+			isa = PBXGroup;
+			children = (
+				28A5E0B02708118000120DEB /* PRView.swift */,
+			);
+			path = PRView;
+			sourceTree = "<group>";
+		};
+		28A5E0B22708119300120DEB /* PRLabels */ = {
+			isa = PBXGroup;
+			children = (
+				28A5E0B3270811AD00120DEB /* PRLabel.swift */,
+				28A5E0B527081DC900120DEB /* PRButton.swift */,
+			);
+			path = PRLabels;
+			sourceTree = "<group>";
+		};
+		28A5E0B727081E3E00120DEB /* Ext+ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				28A5E0B827081EC200120DEB /* ViewController.swift */,
+			);
+			path = "Ext+ViewController";
+			sourceTree = "<group>";
+		};
+		79D981B08066C1B70043BF72 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A71818017E1C21F0DF2E9AD /* Pods-Test-Profile.debug.xcconfig */,
+				981912765E0EFF623F0F621A /* Pods-Test-Profile.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EAD88EAF6A6C9E1C9EEFEE23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				699C81852CD918F6D3DB3FC8 /* Pods_Test_Profile.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,9 +241,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2847FFDF2702D108009061A1 /* Build configuration list for PBXNativeTarget "Test-Profile" */;
 			buildPhases = (
+				599D351DD21CCD15F27865C7 /* [CP] Check Pods Manifest.lock */,
 				2847FFC42702D103009061A1 /* Sources */,
 				2847FFC52702D103009061A1 /* Frameworks */,
 				2847FFC62702D103009061A1 /* Resources */,
+				F0B18ED6C7030624EB630D0E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,27 +300,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		599D351DD21CCD15F27865C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Test-Profile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0B18ED6C7030624EB630D0E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Test-Profile/Pods-Test-Profile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Test-Profile/Pods-Test-Profile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Test-Profile/Pods-Test-Profile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2847FFC42702D103009061A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2847FFE32702D21B009061A1 /* MainViewController.swift in Sources */,
+				28A5E0B627081DC900120DEB /* PRButton.swift in Sources */,
 				2816590B270354F500087208 /* SimCardMenuCV.swift in Sources */,
 				2816591B27044BB200087208 /* ItemInfoReporVCDetails.swift in Sources */,
 				2847FFE52702D47B009061A1 /* ServicesVC.swift in Sources */,
+				281659282706EBE100087208 /* People.swift in Sources */,
+				28A5E0B927081EC200120DEB /* ViewController.swift in Sources */,
+				28A5E0B12708118100120DEB /* PRView.swift in Sources */,
 				2816591E2705C64C00087208 /* NetworkManager.swift in Sources */,
-				2847FFF527032F6B009061A1 /* ServiceCallVC.swift in Sources */,
+				28A5E0E32709BDD500120DEB /* PersonInfoVC.swift in Sources */,
+				2816592A2706F1A700087208 /* PersonImage.swift in Sources */,
+				281659262706BBA100087208 /* SimCardTableCell.swift in Sources */,
 				28165919270449D500087208 /* ItemInfoReportVC.swift in Sources */,
 				2847FFD62702D103009061A1 /* Test_Profile.xcdatamodeld in Sources */,
-				2816590D2703882400087208 /* ModelData.swift in Sources */,
+				28A5E0E5270A237B00120DEB /* RaskhodModel.swift in Sources */,
+				28A5E0E127098A9C00120DEB /* tarifInfoModel.swift in Sources */,
 				2847FFE92702ECCA009061A1 /* MoreFunctionsVC.swift in Sources */,
 				2847FFCC2702D103009061A1 /* AppDelegate.swift in Sources */,
+				28A5E0B4270811AD00120DEB /* PRLabel.swift in Sources */,
 				281659212705C9E000087208 /* GetTarif.swift in Sources */,
 				2847FFCE2702D103009061A1 /* SceneDelegate.swift in Sources */,
 				2847FFEC2702FAB3009061A1 /* menuCell.swift in Sources */,
 				2847FFE72702EC1E009061A1 /* RaskhodVC.swift in Sources */,
-				2847FFF127030FF2009061A1 /* MenuItems.swift in Sources */,
 				281659242705CC2D00087208 /* TFErrors.swift in Sources */,
 				28165917270447B600087208 /* BalanceInfo.swift in Sources */,
 			);
@@ -379,13 +507,14 @@
 		};
 		2847FFE02702D108009061A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A71818017E1C21F0DF2E9AD /* Pods-Test-Profile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HD5QFP6NH3;
 				INFOPLIST_FILE = "Test-Profile/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,13 +528,14 @@
 		};
 		2847FFE12702D108009061A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 981912765E0EFF623F0F621A /* Pods-Test-Profile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HD5QFP6NH3;
 				INFOPLIST_FILE = "Test-Profile/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

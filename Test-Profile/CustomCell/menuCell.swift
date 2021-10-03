@@ -30,8 +30,8 @@ class menuCell: UICollectionViewCell {
     
     
     func setData() {
-        details.setTitle("Последние расходы", for: .normal)
-        addMoney.setTitle("Пополнить", for: .normal)
+        details.setTitle("Подробнее", for: .normal)
+        addMoney.setTitle("Купить", for: .normal)
     }
     
 
@@ -69,9 +69,9 @@ class menuCell: UICollectionViewCell {
         backgroundColor                = .systemYellow
         
         layer.cornerRadius             = 20
-        layer.shadowRadius             = 9
-        layer.shadowOpacity            = 0.3
-        layer.shadowOffset             = CGSize(width: 3, height: 3)
+        layer.shadowRadius             = 6
+        layer.shadowOpacity            = 0.2
+        layer.shadowOffset             = CGSize(width: 2, height: 2)
         clipsToBounds                  = false
 
         NSLayoutConstraint.activate([

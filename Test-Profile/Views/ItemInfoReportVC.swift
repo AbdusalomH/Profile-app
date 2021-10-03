@@ -13,9 +13,19 @@ class ItemInfoReportVC: UIViewController {
     let itemInfoViewOne     = BalanceInfo()
     let ItemInfoViewTwo     = BalanceInfo()
     let ItemInfoViewThree   = BalanceInfo()
-
-
     
+    var tarifInfoModel: TarifInfoModel!
+    
+    init(tarifInfo: TarifInfoModel) {
+        super.init(nibName: nil, bundle: nil)
+        self.tarifInfoModel = tarifInfo
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureBackgroundView()
@@ -38,6 +48,7 @@ class ItemInfoReportVC: UIViewController {
         
     }
     
+    
     private func layoutUI(){
         view.addSubview(stackView)
         
@@ -53,5 +64,5 @@ class ItemInfoReportVC: UIViewController {
             
         ])
     }
-    }
+}
 

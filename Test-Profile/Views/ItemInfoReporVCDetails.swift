@@ -8,18 +8,17 @@
 import UIKit
 
 class ReportInfoVCDetails: ItemInfoReportVC {
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
     }
     
-    
     func configure(){
-        itemInfoViewOne.setItemInfoType(IteminfoType: .min, withCount: 455)
-        ItemInfoViewTwo.setItemInfoType(IteminfoType: .gigabait, withCount: 45)
-        ItemInfoViewThree.setItemInfoType(IteminfoType: .sms, withCount: 334)
+        itemInfoViewOne.setItemInfoType(IteminfoType: .min, withCount: tarifInfoModel.followers )
+        ItemInfoViewTwo.setItemInfoType(IteminfoType: .gigabait, withCount: tarifInfoModel.publicRepos)
+        ItemInfoViewThree.setItemInfoType(IteminfoType: .sms, withCount: tarifInfoModel.publicGists )
     }
 
 }
