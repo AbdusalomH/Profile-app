@@ -45,7 +45,6 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        
         UIConfigure()
         configureCollectionView()
         goToCall()
@@ -56,8 +55,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         configureSimcartButtonNavigation()
         getTarif()
         getBalanceInfo()
-        
-        
+  
     }
     
     
@@ -65,7 +63,6 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
         configureViewheigt()
-
     }
     
     
@@ -135,7 +132,6 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     func goToCall() {
         
         imageService.addTarget(self, action: #selector(serviceCallButtonTapped), for: .touchUpInside)
-        
     }
     
     
@@ -230,7 +226,6 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         containerButton.addSubview(nastroiSvyaz)
         
  
-
         backgroundImage.translatesAutoresizingMaskIntoConstraints   = false
         containerFooter.translatesAutoresizingMaskIntoConstraints   = false
 

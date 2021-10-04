@@ -11,7 +11,7 @@ class SimCardMenuCV: UIViewController {
     
     let tableview = UITableView()
     
-    var getData: [String] = []
+    var getData: [String]       = []
     var getPeopleList: [People] = []
 
     override func viewDidLoad() {

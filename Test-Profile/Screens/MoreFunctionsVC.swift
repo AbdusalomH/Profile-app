@@ -13,6 +13,6 @@ class MoreFunctionsVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
-
     }
 }
+

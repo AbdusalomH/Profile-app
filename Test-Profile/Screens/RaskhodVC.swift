@@ -15,7 +15,6 @@ class RaskhodVC: UIViewController, ChartViewDelegate {
     var pieChart = PieChartView()
 
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -25,15 +24,15 @@ class RaskhodVC: UIViewController, ChartViewDelegate {
 
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
         
-        pieChart.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.width)
-        pieChart.center = view.center
+        pieChart.frame      = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.width)
+        pieChart.center     = view.center
         pieChart.centerText = "Расходы"
-        
-        
+
         view.addSubview(pieChart)
         getRaskhodi()
     }
@@ -59,6 +58,7 @@ class RaskhodVC: UIViewController, ChartViewDelegate {
         pieChart.chartDescription?.text = "Текущий месяц"
  
     }
+    
     
     func getRaskhodi() {
     

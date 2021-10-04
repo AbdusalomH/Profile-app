@@ -54,7 +54,7 @@ class PersonInfoVC: UIViewController {
 
         NSLayoutConstraint.activate([
         
-            imageLogo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            imageLogo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             imageLogo.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             imageLogo.heightAnchor.constraint(equalToConstant: 200),
             imageLogo.widthAnchor.constraint(equalToConstant: 200),

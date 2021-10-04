@@ -172,7 +172,5 @@ struct NetworkManager {
             }
         }
         task.resume()
-        
     }
-
 }
